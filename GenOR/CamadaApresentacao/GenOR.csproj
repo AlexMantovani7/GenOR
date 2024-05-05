@@ -341,16 +341,6 @@
     <None Include="Resources\Apply.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\CamadaObjetoTransferencia\CamadaObjetoTransferencia.csproj">
-      <Project>{9050798A-705B-4126-BE55-DE1ED0DE9BBD}</Project>
-      <Name>CamadaObjetoTransferencia</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\CamadaProcessamento\CamadaProcessamento.csproj">
-      <Project>{0C9CCA2B-DA34-4C47-9203-A104826BE8FD}</Project>
-      <Name>CamadaProcessamento</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Eye.png" />
   </ItemGroup>
   <ItemGroup>
@@ -478,6 +468,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CamadaObjetoTransferencia\CamadaObjetoTransferencia.csproj">
+      <Project>{9050798a-705b-4126-be55-de1ed0de9bbd}</Project>
+      <Name>CamadaObjetoTransferencia</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CamadaProcessamento\CamadaProcessamento.csproj">
+      <Project>{0c9cca2b-da34-4c47-9203-a104826be8fd}</Project>
+      <Name>CamadaProcessamento</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

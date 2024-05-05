@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CamadaProcessamento", "..\CamadaProcessamento\CamadaProcessamento.csproj", "{0C9CCA2B-DA34-4C47-9203-A104826BE8FD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CamadaObjetoTransferencia", "..\CamadaObjetoTransferencia\CamadaObjetoTransferencia.csproj", "{9050798A-705B-4126-BE55-DE1ED0DE9BBD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CamadaAcessoDados", "..\CamadaAcessoDados\CamadaAcessoDados.csproj", "{0677740B-82FD-4071-A565-7BCB77E9CEC9}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenOR", "CamadaApresentacao\GenOR.csproj", "{160F16F7-30B9-4215-A70E-3E1FBA05DC8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CamadaAcessoDados", "CamadaAcessoDados\CamadaAcessoDados.csproj", "{0677740B-82FD-4071-A565-7BCB77E9CEC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CamadaObjetoTransferencia", "CamadaObjetoTransferencia\CamadaObjetoTransferencia.csproj", "{9050798A-705B-4126-BE55-DE1ED0DE9BBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CamadaProcessamento", "CamadaProcessamento\CamadaProcessamento.csproj", "{0C9CCA2B-DA34-4C47-9203-A104826BE8FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,22 +17,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0C9CCA2B-DA34-4C47-9203-A104826BE8FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0C9CCA2B-DA34-4C47-9203-A104826BE8FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0C9CCA2B-DA34-4C47-9203-A104826BE8FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0C9CCA2B-DA34-4C47-9203-A104826BE8FD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9050798A-705B-4126-BE55-DE1ED0DE9BBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9050798A-705B-4126-BE55-DE1ED0DE9BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9050798A-705B-4126-BE55-DE1ED0DE9BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9050798A-705B-4126-BE55-DE1ED0DE9BBD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0677740B-82FD-4071-A565-7BCB77E9CEC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0677740B-82FD-4071-A565-7BCB77E9CEC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0677740B-82FD-4071-A565-7BCB77E9CEC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0677740B-82FD-4071-A565-7BCB77E9CEC9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{160F16F7-30B9-4215-A70E-3E1FBA05DC8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{160F16F7-30B9-4215-A70E-3E1FBA05DC8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{160F16F7-30B9-4215-A70E-3E1FBA05DC8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{160F16F7-30B9-4215-A70E-3E1FBA05DC8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0677740B-82FD-4071-A565-7BCB77E9CEC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0677740B-82FD-4071-A565-7BCB77E9CEC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0677740B-82FD-4071-A565-7BCB77E9CEC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0677740B-82FD-4071-A565-7BCB77E9CEC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9050798A-705B-4126-BE55-DE1ED0DE9BBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9050798A-705B-4126-BE55-DE1ED0DE9BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9050798A-705B-4126-BE55-DE1ED0DE9BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9050798A-705B-4126-BE55-DE1ED0DE9BBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C9CCA2B-DA34-4C47-9203-A104826BE8FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C9CCA2B-DA34-4C47-9203-A104826BE8FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C9CCA2B-DA34-4C47-9203-A104826BE8FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C9CCA2B-DA34-4C47-9203-A104826BE8FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
