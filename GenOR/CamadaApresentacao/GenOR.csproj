@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{160F16F7-30B9-4215-A70E-3E1FBA05DC8E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GenOR</RootNamespace>
+    <AssemblyName>GenOR</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1004\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormBackup_Restore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBackup_Restore.Designer.cs">
+      <DependentUpon>FormBackup_Restore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConfiguracaoInicialBD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfiguracaoInicialBD.Designer.cs">
+      <DependentUpon>FormConfiguracaoInicialBD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMateriaisOuProdutos_Vinculados_GrupoUnidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMateriaisOuProdutos_Vinculados_GrupoUnidade.Designer.cs">
+      <DependentUpon>FormMateriaisOuProdutos_Vinculados_GrupoUnidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMateriais_Vinculados_Fornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMateriais_Vinculados_Fornecedor.Designer.cs">
+      <DependentUpon>FormMateriais_Vinculados_Fornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProdutosServicos_Vinculados_Material.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProdutosServicos_Vinculados_Material.Designer.cs">
+      <DependentUpon>FormProdutosServicos_Vinculados_Material.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTelaConfiguracoesDocOrcamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTelaConfiguracoesDocOrcamento.Designer.cs">
+      <DependentUpon>FormTelaConfiguracoesDocOrcamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTelaLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTelaLoading.Designer.cs">
+      <DependentUpon>FormTelaLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTelaPesquisaGrupo_Unidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTelaPesquisaGrupo_Unidade.Designer.cs">
+      <DependentUpon>FormTelaPesquisaGrupo_Unidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTelaPesquisaLOG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTelaPesquisaLOG.Designer.cs">
+      <DependentUpon>FormTelaPesquisaLOG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTelaPesquisaMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTelaPesquisaMaterial.Designer.cs">
+      <DependentUpon>FormTelaPesquisaMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTelaPesquisaOrcamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTelaPesquisaOrcamento.Designer.cs">
+      <DependentUpon>FormTelaPesquisaOrcamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTelaPesquisaPessoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTelaPesquisaPessoa.Designer.cs">
+      <DependentUpon>FormTelaPesquisaPessoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTelaPesquisaProduto_Servico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTelaPesquisaProduto_Servico.Designer.cs">
+      <DependentUpon>FormTelaPesquisaProduto_Servico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGrupo_Unidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGrupo_Unidade.Designer.cs">
+      <DependentUpon>FormGrupo_Unidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLOG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLOG.Designer.cs">
+      <DependentUpon>FormLOG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMaterial.Designer.cs">
+      <DependentUpon>FormMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenuInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenuInicial.Designer.cs">
+      <DependentUpon>FormMenuInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOrcamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOrcamento.Designer.cs">
+      <DependentUpon>FormOrcamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPessoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPessoa.Designer.cs">
+      <DependentUpon>FormPessoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProduto_Servico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProduto_Servico.Designer.cs">
+      <DependentUpon>FormProduto_Servico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTelaLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTelaLogin.Designer.cs">
+      <DependentUpon>FormTelaLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GerenciarInformacaoRetornadoPesquisa.cs" />
+    <Compile Include="GerenciarMensagensPadraoSistema.cs" />
+    <Compile Include="GerenciarTelaLoading.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormBackup_Restore.resx">
+      <DependentUpon>FormBackup_Restore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfiguracaoInicialBD.resx">
+      <DependentUpon>FormConfiguracaoInicialBD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGrupo_Unidade.resx">
+      <DependentUpon>FormGrupo_Unidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLOG.resx">
+      <DependentUpon>FormLOG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMateriaisOuProdutos_Vinculados_GrupoUnidade.resx">
+      <DependentUpon>FormMateriaisOuProdutos_Vinculados_GrupoUnidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMateriais_Vinculados_Fornecedor.resx">
+      <DependentUpon>FormMateriais_Vinculados_Fornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMaterial.resx">
+      <DependentUpon>FormMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenuInicial.resx">
+      <DependentUpon>FormMenuInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOrcamento.resx">
+      <DependentUpon>FormOrcamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPessoa.resx">
+      <DependentUpon>FormPessoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProdutosServicos_Vinculados_Material.resx">
+      <DependentUpon>FormProdutosServicos_Vinculados_Material.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProduto_Servico.resx">
+      <DependentUpon>FormProduto_Servico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTelaConfiguracoesDocOrcamento.resx">
+      <DependentUpon>FormTelaConfiguracoesDocOrcamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTelaLoading.resx">
+      <DependentUpon>FormTelaLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTelaLogin.resx">
+      <DependentUpon>FormTelaLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTelaPesquisaGrupo_Unidade.resx">
+      <DependentUpon>FormTelaPesquisaGrupo_Unidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTelaPesquisaLOG.resx">
+      <DependentUpon>FormTelaPesquisaLOG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTelaPesquisaMaterial.resx">
+      <DependentUpon>FormTelaPesquisaMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTelaPesquisaOrcamento.resx">
+      <DependentUpon>FormTelaPesquisaOrcamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTelaPesquisaPessoa.resx">
+      <DependentUpon>FormTelaPesquisaPessoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTelaPesquisaProduto_Servico.resx">
+      <DependentUpon>FormTelaPesquisaProduto_Servico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\CamadaObjetoTransferencia.Endereco.datasource" />
+    <None Include="Properties\DataSources\CamadaObjetoTransferencia.Grupo.datasource" />
+    <None Include="Properties\DataSources\CamadaObjetoTransferencia.ListaMateriais_Produto_Servico.datasource" />
+    <None Include="Properties\DataSources\CamadaObjetoTransferencia.LOG.datasource" />
+    <None Include="Properties\DataSources\CamadaObjetoTransferencia.Materiais_Orcamento.datasource" />
+    <None Include="Properties\DataSources\CamadaObjetoTransferencia.Materiais_Produto_Servico.datasource" />
+    <None Include="Properties\DataSources\CamadaObjetoTransferencia.Material.datasource" />
+    <None Include="Properties\DataSources\CamadaObjetoTransferencia.Orcamento.datasource" />
+    <None Include="Properties\DataSources\CamadaObjetoTransferencia.Pessoa.datasource" />
+    <None Include="Properties\DataSources\CamadaObjetoTransferencia.Produtos_Servicos_Orcamento.datasource" />
+    <None Include="Properties\DataSources\CamadaObjetoTransferencia.Produto_Servico.datasource" />
+    <None Include="Properties\DataSources\CamadaObjetoTransferencia.Telefone.datasource" />
+    <None Include="Properties\DataSources\CamadaObjetoTransferencia.Unidade.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\No-entry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Yes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CamadaObjetoTransferencia\CamadaObjetoTransferencia.csproj">
+      <Project>{9050798A-705B-4126-BE55-DE1ED0DE9BBD}</Project>
+      <Name>CamadaObjetoTransferencia</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CamadaProcessamento\CamadaProcessamento.csproj">
+      <Project>{0C9CCA2B-DA34-4C47-9203-A104826BE8FD}</Project>
+      <Name>CamadaProcessamento</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture-Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom-In.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Budget wallpaper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Administrator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Directory-Listing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Client-Account-Template.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Box-Closed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Column-Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toolbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reseller-Programm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Setting-Tools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Premium-Support.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coin-Single-Gold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sort-Columns.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loading GIF.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loading GIF 2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loading GIF 3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom-Out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asterisk-Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gnome-Edit-Copy-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File-Extension-Doc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Documentos\" />
+    <Folder Include="Resources\Imagens\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Link.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
