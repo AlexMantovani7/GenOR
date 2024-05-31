@@ -93,8 +93,8 @@ namespace GenOR
                 {
                     gerenciarMensagensPadraoSistema.ExceptionBancoDados("O banco de dados MySQL não está ATIVO ou não foi INSTALADO.\n\n" +
                         "PROCEDIMENTOS POSSIVEIS:\n" +
-                        "1 - Verifique se o SERVIÇO MySQL está ATIVO.\n" +
-                        "2 - Prossiga com a INSTALAÇÃO do banco de dados MySQL que será executado a seguir.\n" +
+                        "1 - Verifique se o SERVIÇO MySQL está ATIVO ou contem nomenclatura correta (Exs: 'MySql' ou MySQL mais algum número de 1 até 80 'MySql80').\n" +
+                        "2 - Prossiga com a INSTALAÇÃO do banco de dados MySQL que será executado logo após a mensagem.\n" +
                         "3 - Entre em contato com o DESENVOLVEDOR do sistema.");
 
                     Process.Start(Localizar_Imagem_Documento("mysql-installer-community-8.0.31.0.msi", false));
@@ -116,12 +116,28 @@ namespace GenOR
         {
             try
             {
-                ServiceController mySql_Service = new ServiceController("MySQL");
+                string nome_MySqlService = "MySql";
+                int contador_NomeService = 1;
 
-                if (mySql_Service.Status.Equals(ServiceControllerStatus.Running))
-                    return true;
-                else
-                    return false;
+                ServiceController serviceController;
+
+                while (nome_MySqlService != "MySql81")
+                {
+                    serviceController = new ServiceController(nome_MySqlService);
+
+                    try
+                    {
+                        if (serviceController.Status.Equals(ServiceControllerStatus.Running))
+                            return true;
+                    }
+                    catch (Exception)
+                    {
+                        nome_MySqlService = "MySql" + contador_NomeService.ToString();
+                        contador_NomeService++;
+                    }
+                }
+                
+                return false;
             }
             catch (Exception)
             {

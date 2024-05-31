@@ -2,7 +2,7 @@
 using System.Data;
 using MySql.Data.MySqlClient;
 using System.IO;
-/*using System.Reflection;*/ /*P. DESENVOLVIMENTO*/
+/*using System.Reflection;*/ /*P. DESENVOLVIMENTO(trocar)*/
 using System.Text;
 using System.Linq;
 using System.Windows.Forms;
@@ -26,7 +26,7 @@ namespace CamadaAcessoDados
             try
             {
                 this.parametros = new MySqlCommand().Parameters;
-                this.path_InternoSistema = Path.GetFullPath(Path.Combine(Application.StartupPath, @"Resources\")); /*P. DESENVOLVIMENTO*/ /*Path.GetFullPath(Assembly.GetExecutingAssembly().Location + @"\..\..\..\Resources\");*/
+                this.path_InternoSistema = Path.GetFullPath(Path.Combine(Application.StartupPath, @"Resources\")); /*P. DESENVOLVIMENTO(trocar)*/ /*Path.GetFullPath(Assembly.GetExecutingAssembly().Location + @"\..\..\..\Resources\");*/
             }
             catch (Exception)
             {
